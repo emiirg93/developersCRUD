@@ -1,0 +1,67 @@
+<div class="body-listar encabezado">
+
+    <div class="container animated fadeIn">
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-12">
+                <h1>Agregar Programador</h1>
+                <hr>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                    <form [formGroup]="agregar" (ngSubmit)="onSubmit()">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" formControlName="nombre" aria-describedby="nombreHelp">
+                                <small id="nombreHelp" class="form-text text-muted">Ingrese el nombre del programador</small>
+                            </div>
+                            <div class="form-group">
+                                    <label for="nombre">Apellido</label>
+                                    <input type="text" class="form-control" id="nombre" formControlName="apellido" aria-describedby="nombreHelp">
+                                    <small id="nombreHelp" class="form-text text-muted">Ingrese el Apellido del programador</small>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                            <label for="edad">Edad</label>
+                                            <input type="number" class="form-control" id="edad" max="110" min="16"formControlName="edad" aria-describedby="edadHelp">
+                                            <small id="edadHelp" class="form-text text-muted">Ingrese el Apellido del programador</small>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                            <label for="especialidad">Especialidad</label>
+                                            <select class="custom-select" formControlName="especialidad">
+                                                <option value="backend">BackEnd</option>
+                                                <option value="frontend">FrontEnd</option>
+                                                <option value="fullstack">FullStack</option>
+                                            </select>
+                                            <small id="nombreHelp" class="form-text text-muted">Seleccione su especialidad</small>
+                                    </div>
+                                </div>
+                                    
+                            </div>
+
+                            <div class="form-group">
+                                <div>
+                                    <label for="descripcion">Descripcion</label>
+                                </div>
+                                <div class="row">
+                                        <div class="col">
+                                                <textarea formControlName="descripcion" cols="45" rows="3"></textarea>
+                                                <small id="edadHelp" class="form-text text-muted">Ingrese una descripcion del programador</small>
+                                        </div>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-lg btn-primary" [disabled]="!agregar.valid">Aceptar</button>
+                                    <button type="button" class="btn btn-secondary btn-lg" (click)= "redirect($event)" >Cancelar</button>
+                            </div>
+                    </form>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

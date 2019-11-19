@@ -1,0 +1,9 @@
+.body-about{
+    background-image: url(/assets/img/fondo-about.jpg);
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    color: black;
+}

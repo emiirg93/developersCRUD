@@ -1,0 +1,24 @@
+.body{
+    background-image: url(/assets/img/banner-header.jpeg);
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}

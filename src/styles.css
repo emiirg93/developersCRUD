@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.encabezado{
+    padding-top: 100px;
+}
+
+body{
+    background-image: url(/assets/img/fondo-listado.jpg);
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+}

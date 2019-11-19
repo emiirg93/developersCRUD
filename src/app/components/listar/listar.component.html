@@ -1,0 +1,26 @@
+<div class="body-listar">
+  <div class="container animated fadeIn">
+    <div class="encabezado">
+      <h1>Listado Programadores</h1>
+      <button [routerLink]="['/agregar']">Agregar Programador</button>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let item of developers">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title"> {{item.nombre}} {{item.apellido}} </h3>
+              <p class="card-text">edad : {{item.edad}} </p>
+              <p class="card-text">Especialidad : {{item.especialidad}}</p>
+              <p class="card-text">Descripcion : {{item.descripcion}}</p>
+              <div class="d-flex justify-content-end">
+                  <button [routerLink]="['/editar',item.id]"  class="btn btn-info"><i class="fas fa-pencil-alt"></i></button><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+    </div>
+  </div>
+</div>

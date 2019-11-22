@@ -1,0 +1,28 @@
+.body-login{
+    background-image: url(/assets/img/fondo-login-registro.jpg);
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    color: black;
+    position: absolute;
+    z-index: -1;
+}
+
+.card{
+    margin-top: 110px;
+    background-color: rgba(0, 0, 0, 0.486);
+    height: 600px;
+    width: 400px;
+    color: white;
+}
+
+.logo-titulo{
+    display: block;
+    text-align: center;
+}
+
+img{
+    height: 150px;
+}

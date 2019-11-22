@@ -17,6 +17,18 @@ export class MiServicioService {
   public traerUno(id:number){
     return this.httpClient.get<developer>(`${this.url}/developer/${id}`);
   }
+
+  public editar(developer:developer){
+    return this.httpClient.put<developer>(`${this.url}/edit`,developer);
+  }
+
+  public eliminar(id:number){
+    return this.httpClient.delete<developer>(`${this.url}/delete/${id}`);
+  }
+
+  public agregar(developer:developer){
+    return this.httpClient.post<developer>(`${this.url}/add`,developer);
+  }
 }
 
 export interface developer{

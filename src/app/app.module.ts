@@ -11,6 +11,7 @@ import { AgregarComponent } from './components/agregar/agregar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditarComponent } from './components/editar/editar.component';
 import { HttpClientModule } from "@angular/common/http";
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from "@angular/common/http";
     ListarComponent,
     AboutComponent,
     AgregarComponent,
-    EditarComponent
+    EditarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

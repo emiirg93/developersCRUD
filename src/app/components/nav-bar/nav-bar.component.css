@@ -23,3 +23,9 @@ a{
 a:hover{
     color:rgb(177, 177, 177);
 }
+
+.pos-f-t{
+    position:absolute;
+    z-index: 1;
+    width: 100%;
+}

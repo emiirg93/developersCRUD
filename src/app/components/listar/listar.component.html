@@ -1,20 +1,33 @@
-<div class="body-listar">
-  <div class="container animated fadeIn">
-    <div class="encabezado">
-      <h1>Listado Programadores</h1>
-      <button [routerLink]="['/agregar']">Agregar Programador</button>
+<div class="body-listar animated fadeIn">
+  <div class="container ">
+    <div class="row encabezado">
+      <div class="col-6">
+          <h1>Listado Programadores</h1>
+          <button class="btn btn-secondary btn-lg" [routerLink]="['/agregar']">Agregar Programador</button>
+      </div>
+      <div class="col-6 d-flex justify-content-end align-items-end contenedor-filtrar">
+            
+                <select (change)="filtrar($event.target.value)" class="custom-select col-lg-4" name="filtro" id="filtro">
+                    <option selected>Todos</option>
+                    <option value="backend">BackEnd</option>
+                    <option value="frontend">FrontEnd</option>
+                    <option value="fullstack">FullStack</option>
+                </select>
+            
+      </div>
+      
     </div>
     <hr>
     <div class="row">
-        <div class="col-sm-4" *ngFor="let item of developers">
+        <div class="col-sm-4 margin" *ngFor="let item of filtro">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body" >
               <h3 class="card-title"> {{item.nombre}} {{item.apellido}} </h3>
               <p class="card-text">edad : {{item.edad}} </p>
               <p class="card-text">Especialidad : {{item.especialidad}}</p>
               <p class="card-text">Descripcion : {{item.descripcion}}</p>
-              <div class="d-flex justify-content-end">
-                  <button [routerLink]="['/editar',item.id]"  class="btn btn-info"><i class="fas fa-pencil-alt"></i></button><button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+              <div class="d-flex justify-content-end contenedor-btn" *ngIf="item.id == id">
+                  <button [routerLink]="['/editar',item.id]"  class="btn bg-info text-white"><i class="fas fa-pencil-alt"></i></button><button class="btn btn-danger" (click)="eliminar(item.id)"><i class="fas fa-trash-alt"></i></button>
               </div>
             </div>
           </div>

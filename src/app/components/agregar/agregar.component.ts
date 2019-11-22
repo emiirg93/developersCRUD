@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MiServicioService } from 'src/app/services/mi-servicio.service';
 
 @Component({
   selector: 'app-agregar',
@@ -17,13 +18,14 @@ export class AgregarComponent implements OnInit {
     descripcion: ['',[Validators.required]]
   })
 
-  constructor(private fb: FormBuilder,private router:Router) { }
+  constructor(private fb: FormBuilder,private router:Router, private service:MiServicioService) { }
 
   ngOnInit() {
   }
 
   onSubmit(){
-    console.log(this.agregar.value);
+    this.service.agregar(this.agregar.value)
+    .subscribe(data => this.router.navigateByUrl('/listar'));
     this.router.navigate(['/listar']);
   }
 

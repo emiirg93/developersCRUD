@@ -1,4 +1,4 @@
-<div class="nav-bar">
+<div class="nav-bar d-none d-sm-none d-md-flex">
   <div class="logo-titulo">
     <a [routerLink]="['home']">
       <img class="icono" src="./assets/img/icon.png" alt="" />
@@ -6,8 +6,29 @@
     </a>
   </div>
   <div class="navegacion">
-    <a [routerLink]="['listar']" routerLinkActive="router-link-active">Listado</a>
+      <a [routerLink]="['login']" routerLinkActive="active">Login</a>
 
-    <a [routerLink]="['about']" routerLinkActive="router-link-active">Sobre la app</a>
+    <a [routerLink]="['listar']" routerLinkActive="active">Listado</a>
+
+    <a [routerLink]="['about']" routerLinkActive="active">Sobre la app</a>
   </div>
+</div>
+
+<div class="pos-f-t d-block d-sm-block d-md-none">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-dark p-4 d-flex justify-content-end">
+          <a [routerLink]="['listar']" routerLinkActive="router-link-active" (click)="cerrarNB()">Listado</a>
+
+          <a [routerLink]="['about']" routerLinkActive="router-link-active"(click)="cerrarNB()">Sobre la app</a>
+      </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark d-flex justify-content-between">
+        <a [routerLink]="['home']">
+            <img class="icono" src="./assets/img/icon.png" alt="" />
+            DevelopApp
+        </a>
+      <button id="btnNavBar" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
 </div>

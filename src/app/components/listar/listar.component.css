@@ -5,3 +5,11 @@
 p:first-of-type{
     margin-bottom: 0;
 }
+
+.margin{
+    margin-bottom: 15px;
+}
+
+.contenedor-btn button{
+    margin-left: 10px;
+}
